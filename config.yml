@@ -1,0 +1,8 @@
+#BungeeCord Proxy Ip
+BungeeCord-Ip: 192.168.1.1
+#Message players see when trying to join
+Kick-Message: '&a&lPlease join the main server at&6: &5&l173.24.614.214'
+#Pardoned UUIDs
+Pardons:
+- 1f89080add544c39a3c268b2842b3fa8
+- b55ccb8e838b33008706f5c747ff9936

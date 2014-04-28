@@ -1,0 +1,9 @@
+name: NoJoin
+author: Zodaxium
+version: 0.1
+description: Zodaxium Anti DirectConnect
+main: me.zodaxium.nojoin
+commands:
+  njreload:
+    description: Reload NoJoin config!
+    usage: /njreload
