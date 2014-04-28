@@ -22,29 +22,8 @@
 *.iml
 *.ipr
 *.iws
+<<<<<<< HEAD
 .idea/
-# Eclipse stuff
-/.classpath
-/.project
-/.settings
-
-# netbeans
-/nbproject
-
-# vim
-.*.sw[a-p]
-
-# various other potential build files
-/build
-/bin
-/dist
-/manifest.mf
-
-# Mac filesystem dust
-.DS_Store
-
-# intellij
-*.iml
-*.ipr
-*.iws
+=======
 .idea/
+>>>>>>> refs/remotes/choose_remote_name/master
