@@ -11,14 +11,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class NoJoin extends JavaPlugin{
 
-	public String ip;
 	public String kick_message;
+	public List<String> ip;
 	public List<String> pardons;
 	
 	public void onEnable(){
 		saveDefaultConfig();
 		
-		ip = getConfig().getString("BungeeCord-Ip");
+		ip = getConfig().getStringList("BungeeCord-Ip");
 		kick_message = colorize(getConfig().getString("Kick-Message"));
 		pardons = getConfig().getStringList("Pardons");
 		
@@ -31,11 +31,11 @@ public class NoJoin extends JavaPlugin{
 	}
 	
 	public void reloadConfigFile() throws IOException{
-			File file = new File(getDataFolder(), "config.yml");
-			FileConfiguration config = YamlConfiguration.loadConfiguration(file);
+		File file = new File(getDataFolder(), "config.yml");
+		FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 			
-			ip = config.getString("BungeeCord-Ip");
-			kick_message = colorize(config.getString("Kick-Message"));
-			pardons = config.getStringList("Pardons");
+		ip = config.getStringList("BungeeCord-Ip");
+		kick_message = colorize(config.getString("Kick-Message"));
+		pardons = config.getStringList("Pardons");
 	}
 }
