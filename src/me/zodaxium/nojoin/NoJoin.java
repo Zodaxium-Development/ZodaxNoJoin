@@ -16,6 +16,7 @@ public class NoJoin extends JavaPlugin{
 	public List<String> pardons;
 	
 	//Comment
+	//Comment #2
 	public void onEnable(){
 		saveDefaultConfig();
 		
