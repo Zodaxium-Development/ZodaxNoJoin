@@ -15,7 +15,6 @@ public class NoJoin extends JavaPlugin{
 	public List<String> ip;
 	public List<String> pardons;
 	
-	//jellybeans :D
 	public void onEnable(){
 		saveDefaultConfig();
 		
