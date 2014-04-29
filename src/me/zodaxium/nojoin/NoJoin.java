@@ -1,6 +1,7 @@
 package me.zodaxium.nojoin;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import org.bukkit.ChatColor;
@@ -29,15 +30,12 @@ public class NoJoin extends JavaPlugin{
 		return ChatColor.translateAlternateColorCodes('&', message);
 	}
 	
-	public boolean reloadConfigFile(){
-		try{
+	public void reloadConfigFile() throws IOException{
 			File file = new File(getDataFolder(), "config.yml");
 			FileConfiguration config = YamlConfiguration.loadConfiguration(file);
 			
 			ip = config.getString("BungeeCord-Ip");
 			kick_message = colorize(config.getString("Kick-Message"));
 			pardons = config.getStringList("Pardons");
-			return true;
-		}catch(Exception e){ return false; }
 	}
 }

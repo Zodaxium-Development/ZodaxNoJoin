@@ -1,5 +1,7 @@
 package me.zodaxium.nojoin;
 
+import java.io.IOException;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,9 +19,10 @@ public class Commandreload implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(sender.hasPermission("nj.reload")){
-			if(plugin.reloadConfigFile()){
+			try{
+				plugin.reloadConfigFile();
 				sender.sendMessage(ChatColor.GREEN + "Config reloaded successfully!");
-			}else{
+			}catch(IOException e){
 				sender.sendMessage(ChatColor.RED + "Config reload failed! Are there any illegal characters?");
 			}
 		}else{
