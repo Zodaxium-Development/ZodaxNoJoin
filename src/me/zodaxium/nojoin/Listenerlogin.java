@@ -18,7 +18,7 @@ public class Listenerlogin implements Listener{
 	public void onPlayerLogin(PlayerLoginEvent e){
 		String ip = e.getAddress().toString().replaceFirst("/", "");
 		String uuid = e.getPlayer().getUniqueId().toString().replaceAll("-", "");
-		if(plugin.ip.contains(ip) || plugin.pardons.contains(uuid)) return;
+		if(plugin.ips.contains(ip) || plugin.pardons.contains(uuid)) return;
 		e.disallow(Result.KICK_OTHER, plugin.kick_message);
 	}
 }
